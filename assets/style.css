@@ -1,0 +1,381 @@
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    margin: 0.5rem;
+}
+
+img {
+    width: 100%;
+
+}
+
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('Screenshot 2026-04-28 022652.png') no-repeat center center/cover;
+    background-size: cover
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+
+}
+
+.showcase-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0;
+    z-index: 2;
+}
+
+.showcase-top img {
+    width: 170px;
+    z-index: 2;
+}
+
+.showcase-top a {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    z-index: 2;
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+    ;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.3rem;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    opacity: 0.9;
+
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+.tabs{
+    background: var(--dark-color);
+    padding-top:1rem ;
+    border-bottom:3px solid #3d3d3d ;
+}
+.tabs .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+ .tabs .container >div{
+    padding: 1.5rem 0;
+ }
+ .tabs .container >div:hover{
+    color: #fff;
+    border-bottom: 3px solid var(--primary-color);
+    cursor: pointer;
+ }
+ .tab-border{
+    color: #fff;
+    border-bottom: 3px solid var(--primary-color);
+ }
+ .tab-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ 
+ #tab-2-content{
+    display: none;
+ }
+ #tab-1-content{
+    display: none;
+ }
+#tab-2-content{
+    display: none;}
+#tab-3-content{
+    display: none;}
+
+.show{
+    display: block !important;}
+ #tab-1-content .tab-1-content-inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+ }
+ .tab-content{
+    padding: 3rem 0;
+    background: var(--dark-color);
+    color: #fff;
+ }
+ #tab-2-content .tab-2-content-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+ }
+ #tab-2-content .tab-2-content-bottom {
+     display: grid;
+     margin-top: 2rem;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1rem;
+     align-items: center;
+     justify-content: center;
+ }
+ .text-xl{
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+
+ }
+ .text-center{
+    text-align: center;
+ }
+ .text-dark{
+    color: #999;
+ }
+ .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+ }
+ .table{
+    width: 100%;
+    min-width: 650px;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+ }
+ .table thead th{
+    text-transform: uppercase;
+    padding: 0.8rem;
+ }
+.table tbody tr td{
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+
+}
+
+.table tbody tr td:first-child{
+    text-align: left;
+}
+.table tbody tr:nth-child(even) {
+    background: #3d3d3d;
+}
+.footer{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+.footer, .footer a{
+    color: #999;
+    font-size: 0.9rem;
+
+}
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.footer li{
+    line-height: 1.9rem;
+}
+
+@media (max-width: 1024px) {
+    .showcase-content h1 {
+        font-size: 4.2rem;
+    }
+
+    .showcase-content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase {
+        min-height: 70vh;
+        padding-bottom: 3rem;
+    }
+
+    .showcase-top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .showcase-top a {
+        margin-top: 1rem;
+    }
+
+    .showcase-content {
+        margin-top: 4.5rem;
+    }
+
+    .showcase-content h1 {
+        font-size: 3rem;
+    }
+
+    .showcase-content p {
+        font-size: 1.1rem;
+    }
+
+    .btn-xl {
+        font-size: 1.35rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .tabs .container {
+        grid-template-columns: 1fr;
+    }
+
+    #tab-1-content .tab-1-content-inner,
+    #tab-2-content .tab-2-content-top,
+    #tab-2-content .tab-2-content-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    #tab-2-content .tab-2-content-top {
+        text-align: center;
+    }
+
+    .footer .footer-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .table {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .showcase-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .showcase-content p {
+        font-size: 1rem;
+    }
+
+    .btn,
+    .btn-xl,
+    .btn-lg {
+        width: 100%;
+        display: block;
+    }
+
+    .showcase-top {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0.75rem;
+    }
+}
